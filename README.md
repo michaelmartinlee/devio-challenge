@@ -1,104 +1,99 @@
 <p align="center">
   <img src="https://github.com/deviobr/code-patterns/blob/main/images/devio.webp?raw=true" />
-  <h1 align="center">Devio Chanllege</h1>
+  <h1 align="center">Devio Challenge</h1>
 </p>
 
 </br>
 
-## O Desafio 🔎
-Um restaurante precisa poder registrar suas vendas de forma fácil e rápida, este trabalha com preparo de comidas rápidas e o método atual por comanda deixa o processo como um todo mais lento. O restaurante gostaria de ter um ambiente intuitivo listando os produtos mais vendidos e possibilitando a fácil inserção desses no checkout, ele também gostaria de um visual simples, porém moderno.
+## The Challenge 🔎
+A restaurant needs to register its sales easily and quickly. It specializes in preparing fast food, and the current method using order slips slows down the entire process. The restaurant would like an intuitive environment that lists the most popular products and allows for their easy addition to the checkout. They also want a simple yet modern design.
 
 </br>
 
-## Planejamento 🧠
+## Planning 🧠
 
-Frente ao desafio, e com o tempo curto de execução, realizei um planejamento das tarefas seguindo a execução de toda a parte visual e em seguida fazendo a lógica por trás de tudo.
-E para isso utilizei as seguintes ferramentas :
+Given the challenge and the short execution time, I planned the tasks by first focusing on the visual aspects and then working on the logic behind everything. For this, I used the following tools:
 
-* [Vite](https://vitejs.dev/) - Ferramenta que traz o React da forma mais enxuta possível.
-* [Tailwind](https://tailwindcss.com/) - Framework de estilização que permite um maior controle e rapidez na estilização da página
-* [React Router Dom](https://reactrouter.com/en/v6.3.0) - Biblioteca para fazer o roteamento das páginas da sua aplicação de forma dinâmica.
-* [Supabase](https://supabase.com/) - Ferramenta que inclui um banco de dados e outros serviços, facilitando a otimização do back-end.
+* [Vite](https://vitejs.dev/) - A tool that brings React in the most streamlined way possible.
+* [Tailwind](https://tailwindcss.com/) - A styling framework that allows for greater control and speed when styling the page.
+* [React Router Dom](https://reactrouter.com/en/v6.3.0) - A library to dynamically manage page routing in your application.
+* [Supabase](https://supabase.com/) - A tool that includes a database and other services, facilitating back-end optimization.
 
 </br>
 
-##### Arquitetura do projeto 🏗 : 
+##### Project Architecture 🏗 :
 
 </br>
 
 <div>
   <img align="left" src="src/assets/images/imageReadme.png" />
     <ul>
-      <li>./src -  Contém todos arquivos do projeto</li>
-      <li>./src/assets -  Contém todas imagens, sendo exportadas por um único arquivo</li>
-      <li>./src/components -  Contém todos components</li>
-      <li>./src/context -  Onde está toda a lógica da aplicação</li>
-      <li>./src/libs -  Contém arquivo de configuração das libs (Supabase)</li>
-      <li>./src/pages -  Onde contém a construção da páginas utilizando os components</li>
-      <li>./src/styles -  Configurações globais de estilização</li>
-      <li>./src/Routes.tsx -  Configurações das rotas e contexts</li>
+      <li>./src -  Contains all project files</li>
+      <li>./src/assets -  Contains all images, exported through a single file</li>
+      <li>./src/components -  Contains all components</li>
+      <li>./src/context -  Where the application's logic resides</li>
+      <li>./src/libs -  Contains the configuration files for libraries (Supabase)</li>
+      <li>./src/pages -  Contains the pages built using the components</li>
+      <li>./src/styles -  Global styling configurations</li>
+      <li>./src/Routes.tsx -  Configures the routes and contexts</li>
     </ul>
 </div>
   
 </br>
 </br>
 
-#### Mãos a obra 👷‍ : 
- Devido ao tempo proposto e por não ter trabalhado com nada parecido, consegui realizar as seguintes funcionalidades:
+#### Hands-on 👷‍ : 
+Given the proposed timeline and my inexperience with similar projects, I was able to implement the following functionalities:
  
-* ✅ O usuário poderá ver uma pequena quantidade de produtos na tela para seleção rápida
-* ✅ O usuário terá a opção de digitar o nome ou código para encontrar o produto.
-* ❌ O usuário irá poder adicionar/remover itens e acompanhar o resumo do pedido.
-* ❌ O usuário poderá ver o total e o troco.
-* ✅ Deverá poder incluir o nome do cliente para ser entregue o pedido.
-* ❌ Ao finalizar o pedido este deverá ser impresso em uma via para o cliente (impressora térmica), liberando a tela para o próximo pedido
-* ✅ O pedido deverá aparecer para a cozinha junto ao nome do cliente.
-* ✅ A cozinha poderá dar baixa nos pedidos concluídos.
-* ✅ Os pedidos devem aparecer para a cozinha em tempo real.
-* ✅ O usuário poderá incluir uma observação a cozinha.
-* ❌ O usuário poderá atribuir múltiplas formas de pagamento na finalização do pedido.
-* ✅ Os pedidos baixados devem aparecer em uma tela com o nome do cliente, apitando para ser feito a retirada.
+* ✅ The user can view a small selection of products for quick selection.
+* ✅ The user has the option to search for a product by name or code.
+* ❌ The user will be able to add/remove items and monitor the order summary.
+* ❌ The user will be able to view the total and the change.
+* ✅ The user should be able to include the customer's name to deliver the order.
+* ❌ Upon completing the order, it should be printed as a receipt for the customer (thermal printer), freeing the screen for the next order.
+* ✅ The order should appear in the kitchen along with the customer's name.
+* ✅ The kitchen can mark completed orders.
+* ✅ Orders should appear in real-time in the kitchen.
+* ✅ The user can include a note for the kitchen.
+* ❌ The user can assign multiple payment methods when finalizing the order.
+* ✅ Completed orders should appear on a screen with the customer's name and make a sound for pickup.
 
 </br>
 
-#### Fluxo da Funcionalidade 🌀 :
-```
- Usuário podera pesquisar seu pedido (pedido único) >> 
- 
-    Podera escolher a quantidade e verá o preço a pagar >> 
+#### Feature Flow 🌀 :
+Can select the quantity and view the total price >> 
+
+    Can add a note >> Must click "Finalize Order" >> 
     
-        Podera adicionar observação >> Devera clicar em "finalizar pedido" >> 
+        Will be redirected to the payment page >> Must add their name >> 
         
-            Sera redirecionado para página de pagamento >> Deverá adicionar seu nome >> 
+            Order will be saved in a database >> Kitchen will receive the order in real-time >> 
             
-                pedido ira para um banco de dados >> Cozinha irá receber em tempo real seu pedido >> 
-                
-                    Cozinha podera dar baixa em seu pedido (Podendo ser visualizado na página de "Retirada")
-```
+                Kitchen can mark the order as completed (Visible on the "Pickup" page)
 
-#### Observações 🧐 :
 
-Tenho a compreensão de que o projeto não está rodando perfeitamente, existem vários detalhes que gostaria de adicionar, como o usuário pode fazer mais de um pedido, um sistema de pagamento adequado, gostaria também de implementar algum tipo de feedback para o usuário como um toast para entender melhor oque está acontecendo. Mas independente de tudo, estou satisfeito com a entrega pois a minha intenção era entregar um MVP (produto minimamente viável), onde o cliente possa ter a noção do produto e assim fazer as features necessárias. Pois um código que não ajuda ninguem são apenas linhas fúteis.
+#### Observations 🧐 :
 
-#### Dificuldades 😱 :
+I understand that the project is not running perfectly, and there are several details I would like to add, such as allowing the user to place multiple orders, implementing an adequate payment system, and adding some type of feedback (like a toast notification) to help the user understand what's happening. Regardless, I’m satisfied with the delivery since my goal was to provide an MVP (Minimum Viable Product) to give the client an idea of the product and allow for necessary features to be added. After all, code that helps no one is just useless lines.
 
-* Implementar o visual - Logo de cara tive a dificuldade de implementar o visual que era proposto, pois não tinha exatamente os detalhes da parte visual como fonte, cor, tamanho; então tentei aproximar o máximo póssivel com base na comparação.
+#### Challenges 😱 :
 
-* Usuário conseguir fazer mais de um pedido - Estava implementando essa funcionalidade, porém percebi que estava perdendo muito tempo nela, então decidi não continuar insistindo, e deixar o usuário apenas podendo fazer um único pedido, mas tendo uma jornada completa.
+* **Implementing the Visual Design**: Initially, I struggled with implementing the proposed design, as the exact details (like fonts, colors, and sizes) were not provided. I tried to approximate as closely as possible based on comparisons.
 
-* Guardar os Pedidos - Outra dificuldade, pois queria guardar as informações dos pedidos, mas como ? pensei em guardar localmente, e fui a pesquisa para ver como fazer, mas não estava chegando a algo concreto. Então pensei em criar um backend, porém iria demorar muito e com certeza não conseguiria entregar algo. Então procurei plataformas que tivessem esse objetivo, e testei algumas como o Firebase, Back4App, mas o que mais me atendeu foi o Supabase, que é uma implementação super simples.
+* **Allowing Users to Place Multiple Orders**: I started working on this functionality but realized I was spending too much time on it. I decided to let users place only a single order but provide a complete journey for that order.
 
-#### Aprendizados 🤓 :
+* **Saving Orders**: Another challenge was figuring out how to save the order information. Should I save it locally? I researched but couldn’t find a concrete solution. I considered creating a backend, but it would take too long, and I wouldn’t be able to deliver on time. I then tested platforms like Firebase and Back4App, but Supabase turned out to be the best fit with its super simple implementation.
 
-- Manipulação de dados do usuário - Em projetos anteriores já trabalhei com informações do usuário, e geralmente utilizava um "state" do React para cada informação, porém nesse projeto tinha muitas informações manipulaveis, e na metade do projeto ví que já estava com uns 8 "state", e estava me perdendo em próprio códgio. Desse modo, decidi refatorar e deixar as informações em um único "state", isso que ocasinou o usuário poder fazer somente um pedido. 
+#### Learnings 🤓 :
 
-- Guardas os Pedidos - Foi uma dificuldade encontrar uma forma de fazer ? Foi, mas com isso tive a experiência de testar diversos serviços de back-end, passar pela difuldade de implementar cada um, e assim percebo que tive esse aprendizado de buscar um serviço, entender esse serviço, implentar e etc.
+- **Managing User Data**: In previous projects, I often used a separate React "state" for each piece of user information. However, in this project, there were many manipulable pieces of information, and halfway through, I noticed I already had around 8 states and was losing track of my own code. I refactored to keep all the information in a single state, which inadvertently limited the user to placing just one order.
+
+- **Saving Orders**: While finding a solution was challenging, the experience of testing various back-end services, struggling with implementation, and finally understanding and integrating Supabase taught me a lot about choosing and using the right tools.
 
 </br>
 </br>
 
-## Expressões de gratidão 🎁 
+## Expressions of Gratitude 🎁 
 
-* Estou muito grato não só a finalização, mas também a todo aprendizado obtido 🤓
-* Obrigado publicamente 💙
-
+* I’m very grateful not only for completing the project but also for all the learning I gained along the way. 🤓
+* Public thank you 💙
